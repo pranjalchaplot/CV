@@ -136,8 +136,26 @@ class _LandingPageState extends State<LandingPage> {
               ,
             ),
             SizedBox(height: 20),
-            Container(
-              child: Text("Download Resume"),
+            GestureDetector(
+              onTap: () {
+                _launchURL("https://github.com/pranjalchaplot/");
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    gradient: LinearGradient(
+                        colors: [
+                          const Color(0xffA2834D),
+                          const Color(0xffBC9A5F)
+                        ],
+                        begin: FractionalOffset.topRight,
+                        end: FractionalOffset.bottomLeft)),
+                child: Text(
+                  "Download Resume",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
           ],
         ),
